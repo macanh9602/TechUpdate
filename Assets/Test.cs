@@ -1,51 +1,33 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor;
 using UnityEngine;
 
 namespace AntiStress.MiniGame
 {
-    public class Test : MonoBehaviour
-    {
-        //===================================================
-        #region [FIELDS]
-        //
-        #endregion
-	//===================================================
+        public class CheckUnityPath
+        {
+                [MenuItem("MCP/Check PATH")]
+                public static void ShowPath()
+                {
+                        var path = System.Environment.GetEnvironmentVariable("PATH");
+                        UnityEngine.Debug.Log("UNITY PATH = " + path);
+                }
 
-        //===================================================
-        #region [PROPERTIES]
+                [MenuItem("MCP/Spawn Red Sphere")]
+                public static void SpawnRedSphere()
+                {
+                        GameObject sphere = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                        sphere.transform.position = Vector3.zero;
+                        sphere.transform.localScale = new Vector3(5f, 5f, 5f);
+                        sphere.name = "Large Red Sphere";
 
-        #endregion
-        //===================================================
+                        Renderer renderer = sphere.GetComponent<Renderer>();
+                        Material material = new Material(Shader.Find("Standard"));
+                        material.color = Color.red;
+                        renderer.material = material;
 
-	//===================================================
-        #region [LYFECIRCLE]
-
-        #endregion
-        //===================================================
-
-        //===================================================
-        #region [UNITY_METHODS]
-
-        #endregion
-	//===================================================
-
-	//===================================================	
-        #region [PRIVATE_METHODS]
-
-        #endregion
-        //===================================================
-
-	//===================================================
-        #region [PROTECTED_METHODS]
-
-        #endregion
-        //===================================================
-	
-	//===================================================
-        #region [PUBLIC_METHODS]
-
-        #endregion
-        //===================================================
-    }
+                        UnityEngine.Debug.Log("Spawned large red sphere at world origin (0, 0, 0)");
+                }
+        }
 }
