@@ -5,11 +5,37 @@
       "Assembly-CSharp/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Assembly-CSharp-firstpass": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/Assembly-CSharp.dll": {}
         },
         "runtime": {
           "bin/placeholder/Assembly-CSharp.dll": {}
+        }
+      },
+      "Assembly-CSharp-Editor-firstpass/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "dependencies": {
+          "Assembly-CSharp-firstpass": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Assembly-CSharp-Editor-firstpass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp-Editor-firstpass.dll": {}
+        }
+      },
+      "Assembly-CSharp-firstpass/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.1",
+        "compile": {
+          "bin/placeholder/Assembly-CSharp-firstpass.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Assembly-CSharp-firstpass.dll": {}
         }
       }
     }
@@ -19,11 +45,23 @@
       "type": "project",
       "path": "Assembly-CSharp.csproj",
       "msbuildProject": "Assembly-CSharp.csproj"
+    },
+    "Assembly-CSharp-Editor-firstpass/1.0.0": {
+      "type": "project",
+      "path": "Assembly-CSharp-Editor-firstpass.csproj",
+      "msbuildProject": "Assembly-CSharp-Editor-firstpass.csproj"
+    },
+    "Assembly-CSharp-firstpass/1.0.0": {
+      "type": "project",
+      "path": "Assembly-CSharp-firstpass.csproj",
+      "msbuildProject": "Assembly-CSharp-firstpass.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.1": [
-      "Assembly-CSharp >= 1.0.0"
+      "Assembly-CSharp >= 1.0.0",
+      "Assembly-CSharp-Editor-firstpass >= 1.0.0",
+      "Assembly-CSharp-firstpass >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -51,6 +89,12 @@
         "netstandard2.1": {
           "targetAlias": "netstandard2.1",
           "projectReferences": {
+            "/Users/mobione/wkspaces/Technical/Assembly-CSharp-Editor-firstpass.csproj": {
+              "projectPath": "/Users/mobione/wkspaces/Technical/Assembly-CSharp-Editor-firstpass.csproj"
+            },
+            "/Users/mobione/wkspaces/Technical/Assembly-CSharp-firstpass.csproj": {
+              "projectPath": "/Users/mobione/wkspaces/Technical/Assembly-CSharp-firstpass.csproj"
+            },
             "/Users/mobione/wkspaces/Technical/Assembly-CSharp.csproj": {
               "projectPath": "/Users/mobione/wkspaces/Technical/Assembly-CSharp.csproj"
             }
